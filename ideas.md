@@ -1,0 +1,3 @@
+- tox
+- react metamask
+- travis pytest/jest coverage join for coveralls
