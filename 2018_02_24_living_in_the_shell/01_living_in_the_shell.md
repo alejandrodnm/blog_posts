@@ -47,6 +47,8 @@ You can read more on the plugins [here](https://github.com/robbyrussell/oh-my-zs
 Here's how it looks the syntax highlight, the `[NORMAL]` tag that appears on
 the right it's letting me know that I'm in vim normal mode.
 
+![zsh](zsh.png)
+
 ## Tmux
 
 https://github.com/tmux/tmux
@@ -65,6 +67,8 @@ You can set the vi-keybinds to move between panes and windows, customize the
 colors and add powerline to it.
 
 This is how my tmux config looks like.
+
+![zsh](tmux.png)
 
 ## Asdf
 
@@ -111,6 +115,8 @@ Vundle: for managing vim plugins
 [tagbar](https://github.com/majutsushi/tagbar): Dynamic ctags bar of the current file
 [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags): ctags handling for jump to definition
 
+![nvim](nvim.png)
+
 ## Fzf & RipGrep
 
 https://github.com/junegunn/fzf
@@ -125,6 +131,10 @@ command line history.
 It can be configured to use ripgrep, a grep-like tool that's faster than the
 competition for faster search results. Vim integration is really easy allowing
 searching for files or content within a project.
+
+When I click Ctrl-r for backward search on the history this is what I get.
+
+![zsh](fzf_history.png)
 
 ## Ranger
 
@@ -188,8 +198,12 @@ https://github.com/Aaronepower/tokei
 > number of files, total lines within those files and code, comments, and
 > blanks grouped by language.
 
+![tokei](tokei.png)
+
 ## Ternimal
 
 https://github.com/p-e-w/ternimal
 
 It's your mascot on the terminal.
+
+![ternimal](ternimal.gif)
