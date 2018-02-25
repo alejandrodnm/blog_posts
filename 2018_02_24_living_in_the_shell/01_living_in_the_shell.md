@@ -1,18 +1,16 @@
-# Living in the shell - My mouseless  workspace
+# Living in the shell - My mouse-less  workspace
 
-A couple of years ago I started using Vim, at the time I was a thinking about
-how much I was relying on the autocomplete feature of IDEs to write code, it
-was like going on automatic, type a few words, pressed TAB, select and repeat.
-It felt like I was being lazy with my mind, then one day I decided to give Vim
-a try and I've never used other editors/IDEs since.
+A couple of years ago I decided to give Vim a try, it seems like an impossible
+task at first, there were so many things to remember, but with some practice,
+I managed to get a handle on the power of the editor. As time passed I realized
+just how annoying the mouse was, having to move my hand away from the keyword
+felt wrong, like a disruption, that's when my mouse-less age began.
 
-Using Vim made me realize just how annoying the mouse was. Every time I had
-to move my hand away from the keyword it felt wrong, like a disruption, that's
-when my mouseless age began. In this posts, I will show some of the tools I
-use on daily basis.
+In this posts, I will show some of the tools I use on daily basis when workin
+from the terminal.
 
-Here's my [dotfiles configuration](https://github.com/alejandrodnm/dotfiles)
-if you want to take a look.
+On a side note, here's my [dotfiles configuration](https://github.com/alejandrodnm/dotfiles)
+if you want to take a look on how I've configured some of the apps.
 
 ## Mapping CapsLock to Ctrl
 
