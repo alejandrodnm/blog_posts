@@ -2,11 +2,12 @@
 
 A couple of years ago I decided to give Vim a try, it seems like an impossible
 task at first, there were so many things to remember, but with some practice,
-I managed to get a handle on the power of the editor. As time passed I realized
-just how annoying the mouse was, having to move my hand away from the keyword
-felt wrong, like a disruption, that's when my mouse-less age began.
+I managed to get a handle on the power of the editor. As time passed a
+realization came to me, the mouse was really annoying, having to move my hand
+away from the keyword felt wrong, like a disruption, that's when my mouse-less
+age began.
 
-In this posts, I will show some of the tools I use on daily basis when workin
+In this posts, I will show some of the tools I use on daily basis when working
 from the terminal.
 
 On a side note, here's my [dotfiles configuration](https://github.com/alejandrodnm/dotfiles)
@@ -18,7 +19,7 @@ This is such a simple thing, trust me and just do it, you won't believe how
 right it feels once you start using it.
 
 I use Fedora with Gnome so I just have to open the Tweaks application then
-Keyword & Mouse -> Aditional Layout Options -> Caps Lock behavior -> Caps Lock
+Keyword & Mouse -> Additional Layout Options -> Caps Lock behavior -> Caps Lock
 is also Ctrl.
 
 
@@ -30,7 +31,7 @@ https://github.com/robbyrussell/oh-my-zsh
 
 https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 
-Zsh is a UNIX shell and oh-my-zsh a framework for managing its configuration.
+Zsh is a UNIX shell and oh-my-zsh a framework for managing its configuration;
 It's like bash on steroids.
 
 I don't use many zsh plugins, besides syntax highlighting, the ones
@@ -51,20 +52,18 @@ the right it's letting me know that I'm in vim normal mode.
 
 https://github.com/tmux/tmux
 
-From man tmux
+From tmux man page.
 
 > tmux is a terminal multiplexer: it enables a number of terminals to be
 > created, accessed, and controlled from a single screen. tmux may be detached
 > from a screen and continue running in the background, then later reattached.
 
 Tmux allows you, among other things, to split the terminal screen into panes,
-create new tabs (windows), it can be used for peer programming since multiple
-users can log in to the same session, etc.
+create new tabs (windows), it can even be used for peer programming since
+multiple users can log in to the same session.
 
 You can set the vi-keybinds to move between panes and windows, customize the
-colors and add powerline to it.
-
-This is how my tmux config looks like.
+colors and add powerline to it. This is how my tmux config looks like.
 
 ![zsh](tmux.png)
 
@@ -92,26 +91,25 @@ https://neovim.io/
 I switch to NeoVim some time ago, I found it when looking support for real
 colors and got caught by surprise by the maturity of the project. They had
 implemented an async framework (then vim 8 launch it's own), had a clear and
-open roadmap, saner defaults and a focus on compatibility with everything
-regular Vim.
+open roadmap, saner defaults and a focus on compatibility with regular Vim.
 
 I've never had any problem with it, so I don't plan to change anytime soon.
 
 Some of the non language related plugins I use are:
 
-Vundle: for managing vim plugins
-[nerdcommenter](https://github.com/scrooloose/nerdcommenter): Comment blocks of codes
-[nerdtree](https://github.com/scrooloose/nerdtree): File system explorer
-[neomake](https://github.com/neomake/neomake): Linter
-[vim-fugitive](https://github.com/tpope/vim-fugitive): Git support
-[vim-gitgutter](https://github.com/airblade/vim-gitgutter): More Git support
-[vim-monokai](https://github.com/crusoexia/vim-monokai): Theme
-[ack.vim](https://github.com/mileszs/ack.vim): For searching across the project
-[fzf.vim](https://github.com/junegunn/fzf.vim): Fuzzy finder of files and text inside files
-[vim-unimpaired](https://github.com/tpope/vim-unimpaired): Adds useful mappings
-[vim-airline](https://github.com/bling/vim-airline): Status line info
-[tagbar](https://github.com/majutsushi/tagbar): Dynamic ctags bar of the current file
-[vim-gutentags](https://github.com/ludovicchabant/vim-gutentags): ctags handling for jump to definition
+- [Vundle](https://github.com/VundleVim/Vundle.vim): plugins manager.
+- [nerdcommenter](https://github.com/scrooloose/nerdcommenter): comment blocks of codes.
+- [nerdtree](https://github.com/scrooloose/nerdtree): file system explorer.
+- [neomake](https://github.com/neomake/neomake): asynchronous linter.
+- [vim-fugitive](https://github.com/tpope/vim-fugitive): git support.
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter): more Git support.
+- [vim-monokai](https://github.com/crusoexia/vim-monokai): theme.
+- [ack.vim](https://github.com/mileszs/ack.vim): for searching across the project.
+- [fzf.vim](https://github.com/junegunn/fzf.vim): fuzzy finder of files and text inside files.
+- [vim-unimpaired](https://github.com/tpope/vim-unimpaired): adds useful mappings.
+- [vim-airline](https://github.com/bling/vim-airline): status bar info.
+- [tagbar](https://github.com/majutsushi/tagbar): dynamic ctags bar of the current file.
+- [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags): ctags handling for jump to definition.
 
 ![nvim](nvim.png)
 
@@ -122,13 +120,12 @@ https://github.com/BurntSushi/ripgrep
 
 > fzf is a general-purpose command-line fuzzy finder.
 
-If you type fzf in the terminal it starts to look for files matching the name,
-can be used for finding process names for `kill -9`, or my favorite, for
-command line history.
+It can be used for searching files, a process pid for a `kill -9`, or my
+favorite, for command line history.
 
-It can be configured to use ripgrep, a grep-like tool that's faster than the
-competition for faster search results. Vim integration is really easy allowing
-searching for files or content within a project.
+To improve timing, it can be configured to use ripgrep, a grep-like tool that's
+faster it's competitors. Vim integration is really easy allowing searching for
+files or content within a project.
 
 When I click Ctrl-r for backward search on the history this is what I get.
 
@@ -138,7 +135,7 @@ When I click Ctrl-r for backward search on the history this is what I get.
 
 https://ranger.github.io/
 
-VIM-inspired filemanager for the console, it's useful for navigating or moving
+VIM-inspired file manager for the console, it's useful for navigating or moving
 files around when you don't want to do a lot of `ls`. The preview feature is
 very good.
 
@@ -151,6 +148,7 @@ https://github.com/rgburke/grv
 Terminal-based interface for viewing git repositories, it's like ranger but
 for git repositories. Allows navigation and filtering of commits, diff and refs.
 
+![grv](grv.png)
 
 # Honorable Mentions
 
@@ -181,7 +179,7 @@ Reads from stdin and writes to stdout with a timestamp. The README.md of the
 repo has an example of finding the slowest step on a docker build; definitely
 check it out.
 
-## exa
+## Exa
 
 https://the.exa.website/
 
@@ -202,6 +200,7 @@ https://github.com/Aaronepower/tokei
 
 https://github.com/p-e-w/ternimal
 
-It's your mascot on the terminal.
+It’s your mascot on the terminal. I’m sure this will improve your productivity
+x10.
 
 ![ternimal](ternimal.gif)
