@@ -1,3 +1,4 @@
 - tox
 - react metamask
 - travis pytest/jest coverage join for coveralls
+- Sceptre for handling cloudformation templates

@@ -43,10 +43,9 @@ plugins=(git mix-fast vi-mode)
 
 You can read more on the plugins [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins).
 
-Here's how it looks the syntax highlight, the `[NORMAL]` tag that appears on
-the right it's letting me know that I'm in vim normal mode.
-
 ![zsh](zsh.png)
+**Here’s how it looks the syntax highlight, the [NORMAL] tag that appears on
+the right it’s letting me know that I’m in vim normal mode.**
 
 ## Tmux
 
@@ -63,9 +62,10 @@ create new tabs (windows), it can even be used for peer programming since
 multiple users can log in to the same session.
 
 You can set the vi-keybinds to move between panes and windows, customize the
-colors and add powerline to it. This is how my tmux config looks like.
+colors and add powerline to it.
 
 ![zsh](tmux.png)
+**My tmux config appearance.**
 
 ## Asdf
 
@@ -88,9 +88,9 @@ $ asdf local python 3.4.0  # Creates a .tool_version file that contains the line
 
 https://neovim.io/
 
-I switch to NeoVim some time ago, I found it when looking support for real
+I switched to NeoVim some time ago, I found it when looking support for real
 colors and got caught by surprise by the maturity of the project. They had
-implemented an async framework (then vim 8 launch it's own), had a clear and
+implemented an async framework (then vim 8 launch its own), had a clear and
 open roadmap, saner defaults and a focus on compatibility with regular Vim.
 
 I've never had any problem with it, so I don't plan to change anytime soon.
@@ -112,6 +112,7 @@ Some of the non language related plugins I use are:
 - [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags): ctags handling for jump to definition.
 
 ![nvim](nvim.png)
+**Vim with nerdtree and tagbar open; notifications from neomake and gitgutter.**
 
 ## Fzf & RipGrep
 
@@ -127,9 +128,8 @@ To improve timing, it can be configured to use ripgrep, a grep-like tool that's
 faster it's competitors. Vim integration is really easy allowing searching for
 files or content within a project.
 
-When I click Ctrl-r for backward search on the history this is what I get.
-
 ![zsh](fzf_history.png)
+**When I click Ctrl-r for backward search on the history this is what I get.**
 
 ## Ranger
 
@@ -149,6 +149,7 @@ Terminal-based interface for viewing git repositories, it's like ranger but
 for git repositories. Allows navigation and filtering of commits, diff and refs.
 
 ![grv](grv.png)
+**Grv from the phoenix repo.**
 
 # Honorable Mentions
 
