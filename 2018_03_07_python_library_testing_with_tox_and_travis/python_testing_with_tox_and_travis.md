@@ -170,6 +170,7 @@ script: tox -e $TOX_ENV
 ```
 
 ![travis](travis.png)
+**Travis CI execution matrix with two jobs.**
 
 # More complex examples
 
