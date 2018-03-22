@@ -34,7 +34,7 @@ it in its own virtualenv with the rest of the package requirements.
 
 The next step is to create the setup.py file, ours looks something like this:
 
-```
+```python
 from setuptools import find_packages, setup
 
 setup(
@@ -77,7 +77,7 @@ in our case, it exposes custom pytests fixtures that can be used by projects tha
 Finally, we need to create the tox.ini file, again here's a sample of the one we
 use:
 
-```
+```ini
 # tox (https://tox.readthedocs.io/) is a tool for running tests
 # in multiple virtualenvs. This configuration file will run the
 # test suite on all supported python versions. To use it, "pip install tox"
@@ -151,7 +151,7 @@ we just have to add the different environments we want to use in the
 travis.yml file, this way will launch two jobs and execute the tests for each
 environment in parallel.
 
-```
+```yaml
 language: python
 install:
   - pip install tox
