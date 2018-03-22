@@ -23,8 +23,8 @@ From the [official docs](https://tox.readthedocs.io/en/latest/):
 To start using tox we need to do three things:
 
 1. Install tox with `pip install tox`.
-2. Create a setup.py file for our package.
-3. Create a tox.ini file at the same directory level than the setup.py file.
+2. Create a *setup.py* file for our package.
+3. Create a *tox.ini* file at the same directory level than the *setup.py* file.
 
 ## Install
 The first step is just executing the `pip install tox` command, you can install
@@ -32,7 +32,7 @@ it in its own virtualenv with the rest of the package requirements.
 
 ## setup.py
 
-The next step is to create the setup.py file, ours looks something like this:
+The next step is to create the *setup.py* file, ours looks something like this:
 
 ```python
 from setuptools import find_packages, setup
@@ -59,7 +59,7 @@ setup(
 )
 ```
 
-This is a really simple setup.py file, it defines the package metadata and
+This is a really simple *setup.py* file, it defines the package metadata and
 its requirements. This file will let us install our package as a dependency
 in other projects, which we can do locally with `pip install -e <path_to_package>`,
 or uploading it to GitHub or [pypi](https://pypi.python.org/pypi) and adding it
@@ -74,7 +74,7 @@ in our case, it exposes custom pytests fixtures that can be used by projects tha
 
 ## tox.ini
 
-Finally, we need to create the tox.ini file, again here's a sample of the one we
+Finally, we need to create the *tox.ini* file, again here's a sample of the one we
 use:
 
 ```ini
@@ -95,7 +95,7 @@ deps =
   -rrequirements.txt
 ```
 
-This is a really simple example, envlist in the tox section specifies that
+This is a really simple example, **envlist** in the tox section specifies that
 we want to run the commands of the testenv section against two versions of
 python, in the example, our targets are 2.7 and 3.5. Tox will work by creating
 a separate virtualenv for each version and installing our package in both of them.
@@ -108,7 +108,7 @@ execute:
 $ tox -e py35
 ```
 
-The commands property in the testenv section defines what tox will execute for
+The **commands** property in the testenv section defines what tox will execute for
 testing our code. The following will be called for each environment:
 
 - pytest for unittest.
@@ -131,10 +131,10 @@ Will execute the command:
 pytest -x tests
 ```
 
-The last item we have is the deps property, here are the dependencies of
+The last item we have is the **deps** property, here are the dependencies of
 our project. You can add them one by one, parameterize them according to the
 environment, or in our case, install everything that's in the
-requirements.txt file.
+*requirements.txt* file.
 
 Whenever we change the project dependencies we have to tell tox to recreate our
 environments and install the new dependencies using the `--recreate` flag.
@@ -148,7 +148,7 @@ $ tox --recreate
 To take advantages of the
 [Travis CI build matrix](https://docs.travis-ci.com/user/customizing-the-build/#Build-Matrix)
 we just have to add the different environments we want to use in the
-travis.yml file, this way will launch two jobs and execute the tests for each
+*travis.yml* file, this way will launch two jobs and execute the tests for each
 environment in parallel.
 
 ```yaml
