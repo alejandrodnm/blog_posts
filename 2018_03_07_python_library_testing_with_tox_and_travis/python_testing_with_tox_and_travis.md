@@ -24,8 +24,8 @@ From the [official docs](https://tox.readthedocs.io/en/latest/):
 To start using tox we need to do three things:
 
 1. Install tox with `pip install tox`.
-2. Create a setup.py for our package.
-3. Create a tox.ini file at the same directoty level than the setup.py file.
+2. Create a setup.py file for our package.
+3. Create a tox.ini file at the same directory level than the setup.py file.
 
 ## Install
 The first step is just executing the `pip install tox` command, you can install
@@ -33,7 +33,7 @@ it in it's own virtualenv with the rest of the package requirements.
 
 ## setup.py
 
-The next steo is to create the setup.py file, ours looks somethings like this:
+The next step is to create the setup.py file, ours looks somethings like this:
 
 ```
 from setuptools import find_packages, setup
@@ -71,12 +71,11 @@ to our requirements file. You can find more about packagin in the
 You may be wondering about the `entry_point` argument passed to the `setup` function,
 the entry `pytest11` is used to make
 [pytest plugins installable by others](https://docs.pytest.org/en/latest/writing_plugins.html#making-your-plugin-installable-by-others),
-in our case is used to expose custom fixtures defined in our package, so the
-projects that install our package can reuse them in their tests.
+in our case it exposes custom pytests fixtures that can be used by projects that install our package.
 
 ## tox.ini
 
-Finally we need to create the tox.ini file, again here's a sample of the one we
+Finally, we need to create the tox.ini file, again here's a sample of the one we
 use:
 
 ```
@@ -98,19 +97,20 @@ deps =
 ```
 
 This is a really simple example, the envlist in the tox section specifies that
-we want to run the commands specified in the testenv section against two
+we want to run the commands of the testenv section against two
 versions of python, in this case our targets are 2.7 and 3.5. Tox will work
 by creating a separate virtualenv for each version and installing our package
 in both of them.
 
-If we want to test only one environment at a time we can pass the `-e` flag to
-tox, for example, to test only python 3.5 we execute:
+If we want to test only one environment at a time we can pass the `-e` flag
+with the name of the environment, for example, to test only python 3.5 we
+execute:
 
 ```
 $ tox -e py35
 ```
 
-The command entry in the testenv section specifies what tox will execute for
+The commands entry in the testenv section defines what tox will execute for
 testing our code. The following will be called for each environment:
 
 - pytest for unittest.
@@ -118,7 +118,7 @@ testing our code. The following will be called for each environment:
 - flake8 for linting.
 
 One thing to notice is that the pytest command is accompanied by
-`{posargs: tests}`, this captures the arguments passed to the tox command after
+`{posargs: tests}`, this captures the arguments of the tox command after
 `--`, pass them through to pytest and append `tests` to the list of arguments.
 
 A call like:
@@ -133,9 +133,9 @@ Will execute the command:
 pytest -x tests
 ```
 
-The last item we have is the deps entry, here we specify the dependencies of
+The last item we have is the deps entry, here are the dependencies of
 our project. You can add them one by one, parametrize them according to the
-environment or in our case just install everything that's in the
+environment, or in our case, install everything that's in the
 requirements.txt file.
 
 Whenever we change the project dependencies we have to tell tox to recreate our
@@ -148,8 +148,9 @@ $ tox --recreate
 
 # Pararelizing with travis
 
-To take advantages of the [Travis CI build matrix](https://docs.travis-ci.com/user/customizing-the-build/#Build-Matrix)
-we just have to specify the different environments we want to use in the
+To take advantages of the
+[Travis CI build matrix](https://docs.travis-ci.com/user/customizing-the-build/#Build-Matrix)
+we just have to add the different environments we want to use in the
 travis.yml file, this way Travis CI will launch two jobs and execute the tests
 for each environment in parallel.
 
@@ -174,6 +175,6 @@ script: tox -e $TOX_ENV
 
 If your want to check more complex configurations you can take a look in the
 [django-braces](https://github.com/brack3t/django-braces/blob/master/tox.ini)
-and [pytest-django](https://github.com/pytest-dev/pytest-django/blob/master/tox.ini) repos, both
-of them parametrize their envs by python and django version, among other things.
-
+and [pytest-django](https://github.com/pytest-dev/pytest-django/blob/master/tox.ini)
+repos, both of them parametrize their environments by python and django
+version, among other things.
