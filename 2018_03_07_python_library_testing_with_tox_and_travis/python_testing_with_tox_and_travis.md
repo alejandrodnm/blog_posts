@@ -12,6 +12,9 @@ not an option (hey we still have two years according to the
 [pythonclock](https://pythonclock.org/)), so this was the perfect opportunity to
 try tox.
 
+![pythonclock](pythonclock.png)
+**pythonclock at the time this was published**
+
 From the [official docs](https://tox.readthedocs.io/en/latest/):
 
 > tox is a generic virtualenv management and test command line tool you can use for:
